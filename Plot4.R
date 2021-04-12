@@ -17,8 +17,9 @@ data$Date_time<-strptime(paste(data$Date,data$Time, sep=" "), "%Y-%m-%d %H:%M:%S
 
 
 #print on png 4 grafics
-par(mfcol = c(2,2),mar=c(4,4,2,1))
+
 png(file="plot4.png",width=480,height=480)
+par(mfcol = c(2,2),mar=c(4,4,2,1))
 # Plot 1
 with(data,plot(Date_time,Global_active_power,type="l",xlab= "",ylab="Global Active Power"))
 
